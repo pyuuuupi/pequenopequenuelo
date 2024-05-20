@@ -3,4 +3,5 @@ small godot dino chrome
 
 #especificaciones de godot
 
-version 4.1
+1.-**version 4.1**
+1.- Author: **pyuuuupi**
