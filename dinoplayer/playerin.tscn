@@ -162,10 +162,12 @@ animation = &"jump"
 frame_progress = 0.43439
 
 [node name="dashCollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(21, 14)
 shape = SubResource("RectangleShape2D_dbnqh")
 
 [node name="runCollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(11, -8)
 shape = SubResource("RectangleShape2D_61df3")
 debug_color = Color(0.323355, 0.462817, 0.242752, 0.42)

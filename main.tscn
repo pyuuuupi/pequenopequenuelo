@@ -14,11 +14,11 @@ script = ExtResource("1_ycp58")
 position = Vector2(85, 451)
 
 [node name="Camera2D" type="Camera2D" parent="Playerin"]
+position = Vector2(486, 92)
 limit_left = 0
 limit_top = 0
 limit_bottom = 0
 limit_smoothed = true
 
 [node name="Floor" parent="." instance=ExtResource("3_w8xhe")]
-visible = false
 position = Vector2(4, -38)

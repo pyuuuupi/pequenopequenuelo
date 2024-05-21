@@ -16,5 +16,4 @@ func game_over():
 	GHUD.update_Highscore()
 
 func _process(delta):
-	if ($Playerin.position.x - $Floor.position.x) > screen_size.x:
-		$Floor.position.x = $Floor.position.x + screen_size.x
+	$Floor.position.x = $Playerin.position.x - 150
