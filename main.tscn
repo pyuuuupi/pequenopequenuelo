@@ -20,4 +20,5 @@ limit_bottom = 0
 limit_smoothed = true
 
 [node name="Floor" parent="." instance=ExtResource("3_w8xhe")]
+visible = false
 position = Vector2(4, -38)
