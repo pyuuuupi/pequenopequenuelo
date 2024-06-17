@@ -9,20 +9,19 @@
 script = ExtResource("1_ycp58")
 
 [node name="Background" parent="." instance=ExtResource("1_s14uy")]
-scroll_offset = Vector2(-1390.67, 0)
 
-[node name="Playerin" parent="." groups=["Playerin"] instance=ExtResource("2_5ttyb")]
-position = Vector2(105, 493)
+[node name="Playerin" parent="." instance=ExtResource("2_5ttyb")]
+position = Vector2(84, 516)
 
-[node name="Camera2D" type="Camera2D" parent="Playerin" groups=["Playerin"]]
-position = Vector2(471, 34)
+[node name="Camera2D" type="Camera2D" parent="Playerin"]
+position = Vector2(486, 92)
 limit_left = 0
 limit_top = 0
 limit_bottom = 0
 limit_smoothed = true
 
 [node name="Floor" parent="." instance=ExtResource("3_w8xhe")]
-position = Vector2(-1, -23)
+position = Vector2(0, -6)
 
 [node name="mobTimer" type="Timer" parent="."]
 

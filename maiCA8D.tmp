@@ -1,28 +1,25 @@
-[gd_scene load_steps=5 format=3 uid="uid://fww67yscdlmj"]
+[gd_scene load_steps=4 format=3 uid="uid://fww67yscdlmj"]
 
 [ext_resource type="PackedScene" uid="uid://da3rpbk2hn5fn" path="res://background/background.tscn" id="1_s14uy"]
-[ext_resource type="Script" path="res://main.gd" id="1_ycp58"]
 [ext_resource type="PackedScene" uid="uid://1nuib5mhed26" path="res://dinoplayer/playerin.tscn" id="2_5ttyb"]
 [ext_resource type="PackedScene" uid="uid://c7ylovja3trpq" path="res://floor/floor.tscn" id="3_w8xhe"]
 
 [node name="Main" type="Node2D"]
-script = ExtResource("1_ycp58")
 
 [node name="Background" parent="." instance=ExtResource("1_s14uy")]
-scroll_offset = Vector2(-1390.67, 0)
 
-[node name="Playerin" parent="." groups=["Playerin"] instance=ExtResource("2_5ttyb")]
-position = Vector2(105, 493)
+[node name="Playerin" parent="." instance=ExtResource("2_5ttyb")]
+position = Vector2(84, 516)
 
-[node name="Camera2D" type="Camera2D" parent="Playerin" groups=["Playerin"]]
-position = Vector2(471, 34)
+[node name="Camera2D" type="Camera2D" parent="Playerin"]
+position = Vector2(486, 92)
 limit_left = 0
 limit_top = 0
 limit_bottom = 0
 limit_smoothed = true
 
 [node name="Floor" parent="." instance=ExtResource("3_w8xhe")]
-position = Vector2(-1, -23)
+position = Vector2(0, -6)
 
 [node name="mobTimer" type="Timer" parent="."]
 

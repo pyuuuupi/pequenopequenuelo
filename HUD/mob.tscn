@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=3 uid="uid://lgtlhbihacfs"]
+
+[ext_resource type="Script" path="res://HUD/mob.gd" id="1_ic6ow"]
+[ext_resource type="Texture2D" uid="uid://dwpfpes2egv30" path="res://mob/moscapunk.jpg" id="2_eefsx"]
+[ext_resource type="Texture2D" uid="uid://blfjj18f5u8c4" path="res://87 sin título_20240616230816.jpg" id="3_gruts"]
+[ext_resource type="Texture2D" uid="uid://dpbron35jrj6l" path="res://mob/88 sin título_20240616230834.jpg" id="4_1bh16"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_chope"]
+size = Vector2(29, 28)
+
+[node name="Mob" type="Area2D" groups=["tilin"]]
+script = ExtResource("1_ic6ow")
+
+[node name="gatocollision" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-14.5, -14)
+shape = SubResource("RectangleShape2D_chope")
+disabled = true
+debug_color = Color(0.900498, 0.273347, 0.391389, 0.42)
+
+[node name="gatocollision" type="Sprite2D" parent="gatocollision"]
+visible = false
+position = Vector2(-0.5, -4.77303e-07)
+rotation = -0.00576516
+scale = Vector2(-0.0204388, 0.0212264)
+skew = 0.0523599
+texture = ExtResource("2_eefsx")
+
+[node name="muffincollision" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-74, -14)
+shape = SubResource("RectangleShape2D_chope")
+disabled = true
+debug_color = Color(0.76149, 0.305463, 0.832745, 0.42)
+
+[node name="muffincollision" type="Sprite2D" parent="muffincollision"]
+visible = false
+position = Vector2(-0.199999, 0.195651)
+scale = Vector2(0.020625, 0.0190557)
+texture = ExtResource("3_gruts")
+
+[node name="scarecollision" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-44, -14)
+shape = SubResource("RectangleShape2D_chope")
+disabled = true
+
+[node name="scarecollision" type="Sprite2D" parent="scarecollision"]
+visible = false
+position = Vector2(0, -0.295456)
+scale = Vector2(0.0218246, 0.0207742)
+texture = ExtResource("4_1bh16")
+region_rect = Rect2(206.105, 146.426, 2.35797, 0)
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(0, -3)
+scale = Vector2(1.5, 1.35)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
